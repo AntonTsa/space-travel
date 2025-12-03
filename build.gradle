@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'checkstyle'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.slf4j:slf4j-simple:2.0.17'
+    implementation 'com.google.code.gson:gson:2.13.2'
+    implementation 'com.h2database:h2:2.3.232'
+    implementation 'org.hibernate.orm:hibernate-core:7.1.11.Final'
+    compileOnly("org.projectlombok:lombok:1.18.42")
+    annotationProcessor("org.projectlombok:lombok:1.18.42")
+    implementation 'org.flywaydb:flyway-core:11.17.2'
+    testCompileOnly("org.projectlombok:lombok:1.18.42")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.42")
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+checkstyle {
+    toolVersion = '10.20.1'
+    configFile = file("checkstyle.xml")
+    ignoreFailures = false
+}
+
+application {
+    mainClass = 'org.example.space.travel.Main'
+}
+
+checkstyleMain {
+    source ='src/main/java'
+}
+
+test {
+    useJUnitPlatform()
+}
