@@ -1,0 +1,30 @@
+INSERT INTO CLIENT (NAME) VALUES
+('Martin'),
+('Sophia'),
+('Liam'),
+('Olivia'),
+('Noah'),
+('Ava'),
+('Elijah'),
+('Isabella'),
+('James'),
+('Mia');
+
+INSERT INTO PLANET (ID, NAME) VALUES
+('EARTH', 'Earth'),
+('JUPITER', 'Jupiter'),
+('SATURN', 'Saturn'),
+('URANUS', 'Uranus'),
+('CERES3', 'Ceres 3');
+
+INSERT INTO TICKET (CREATED_AT, CLIENT_ID, FROM_PLANET_ID, TO_PLANET_ID) VALUES
+(CURRENT_DATE, 1, 'EARTH', 'JUPITER'),
+(DATE '2026-03-10', 2, 'JUPITER', 'SATURN'),
+(DATE '2026-01-15', 3, 'SATURN', 'URANUS'),
+(DATE '2026-02-20', 4, 'URANUS', 'CERES3'),
+(DATE '2026-04-05', 5, 'CERES3', 'EARTH'),
+(DATE '2026-05-12', 6, 'EARTH', 'SATURN'),
+(DATE '2026-06-18', 7, 'JUPITER', 'URANUS'),
+(DATE '2026-07-22', 8, 'SATURN', 'CERES3'),
+(DATE '2026-08-30', 9, 'URANUS', 'EARTH'),
+(DATE '2026-09-14', 10, 'CERES3', 'JUPITER');
