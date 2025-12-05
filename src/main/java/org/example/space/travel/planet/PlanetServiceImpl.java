@@ -3,7 +3,7 @@ package org.example.space.travel.planet;
 import java.util.List;
 
 public class PlanetServiceImpl implements PlanetService {
-    private final PlanetDao planetDao = new PlanetDao();
+    private final PlanetDao planetDao = new PlanetDaoImpl();
 
     @Override
     public void savePlanet(Planet planet) {

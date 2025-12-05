@@ -3,7 +3,7 @@ package org.example.space.travel.client;
 import java.util.List;
 
 public class ClientServiceImpl implements ClientService {
-    private final ClientDao clientDao = new ClientDao();
+    private final ClientDao clientDao = new ClientDaoImpl();
 
     @Override
     public void saveClient(Client client) {
